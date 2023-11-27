@@ -17,3 +17,18 @@ django-widget-tweaks==1.4.12
 Pillow==9.4.0
 pytz==2022.7.1
 sqlparse==0.4.3
+
+
+Login Credentials: (There are two dashboards, one for the user(publisher) and the other for admin
+
+Admin:
+
+username: varniha
+password: 1234
+
+User(Publisher):
+
+username: kodeesh
+password: kodeesh
+
+# You can also craete a new user and login using the register and login page and a new admin using the createsuperuser command.

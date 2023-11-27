@@ -21,14 +21,14 @@ sqlparse==0.4.3
 
 Login Credentials: (There are two dashboards, one for the user(publisher) and the other for admin
 
-Admin:
+Admin: (Only admin has the access to add, view, delete and update books and users from the app)
 
 username: varniha
 password: 1234
 
-User(Publisher):
+User(Publisher): (User can only add a new book and request the admin to delete books that has been created by the user alone)
 
 username: kodeesh
 password: kodeesh
 
-# You can also craete a new user and login using the register and login page and a new admin using the createsuperuser command.
+(You can also craete a new user and login using the register and login page and a new admin using the createsuperuser command.)

@@ -17,9 +17,9 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 SECRET_KEY = '=_!dja1)@@yk!=fw!=5fp2$rs_)678g@+5#)((d0t&#9t^1mn8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -74,11 +74,14 @@ WSGI_APPLICATION = 'bookapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'aGb4-41E3424faB51BagAc3dC-cd2gD1',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '18077',
     }
 }
-
 
 
 # Password validation
@@ -138,3 +141,6 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = 'home'
 #LOGIN_REDIRECT_URL = 'blist'
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')

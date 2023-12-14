@@ -1,14 +1,12 @@
 import os
 from pathlib import Path
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 STATIC_DIR=os.path.join(BASE_DIR,'static')
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -19,7 +17,7 @@ SECRET_KEY = '=_!dja1)@@yk!=fw!=5fp2$rs_)678g@+5#)((d0t&#9t^1mn8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -74,14 +72,11 @@ WSGI_APPLICATION = 'bookapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'aGb4-41E3424faB51BagAc3dC-cd2gD1',
-        'HOST': 'viaduct.proxy.rlwy.net',
-        'PORT': '18077',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 
 # Password validation
@@ -141,6 +136,3 @@ MEDIA_URL = '/media/'
 
 LOGIN_URL = 'home'
 #LOGIN_REDIRECT_URL = 'blist'
-
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
